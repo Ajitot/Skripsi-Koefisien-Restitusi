@@ -1,0 +1,77 @@
+\chapter{PENDAHULUAN}
+
+\section{Latar Belakang}\label{sec:latar}
+ Koefisien restitusi merupakan salah satu konsep fundamental dalam fisika yang menjelaskan sejauh mana dua benda berinteraksi selama tumbukan. Konsep ini memiliki aplikasi luas dalam berbagai bidang, mulai dari olahraga hingga rekayasa industri. Penelitian mengenai koefisien restitusi telah berkembang pesat, dengan berbagai metodologi yang digunakan untuk mengukur dan menganalisis sifat elastisitas material. \citep{cross2002coefficient} melakukan penelitian komprehensif tentang koefisien restitusi pada berbagai jenis bola, termasuk bola tenis, yang menunjukkan bahwa karakteristik material dan kondisi permukaan sangat memengaruhi nilai koefisien restitusi. Sementara itu, \citep{brancazio1981physics} menganalisis fisika bola basket dan menunjukkan pentingnya pemahaman koefisien restitusi dalam konteks olahraga.
+
+Penelitian \citep{penner2002physics} dalam konteks fisika golf menunjukkan bahwa koefisien restitusi bola golf berkisar antara 0,78-0,82, yang optimal untuk performa permainan. Pemahaman tentang elastisitas tumbukan ini memiliki relevansi tinggi dalam berbagai bidang, seperti olahraga, rekayasa kendaraan, dan industri elektronik.
+
+ Penelitian sebelumnya telah menggunakan berbagai metode untuk mengukur koefisien restitusi. \citep{meyer2020coefficient} mengembangkan sistem pengukuran menggunakan analisis video berkecepatan tinggi yang memungkinkan pengukuran yang akurat namun memerlukan peralatan mahal dan analisis pascaproses yang kompleks. \citep{hartono2019analisis} dalam penelitian tesisnya menggunakan metode video tracking untuk menganalisis koefisien restitusi berbagai jenis bola, yang menunjukkan akurasi tinggi namun memerlukan waktu pemrosesan yang lama. \citep{smith2018experimental} melakukan eksperimen menggunakan metode konvensional dengan pengukuran manual yang rentan terhadap kesalahan manusia dan keterbatasan dalam pengumpulan data real-time.
+
+ Meskipun penelitian-penelitian sebelumnya telah memberikan kontribusi signifikan, beberapa kelemahan masih teridentifikasi. Metode video tracking memerlukan analisis pascaproses yang memakan waktu dan peralatan mahal \citep{meyer2020coefficient}. Pengukuran manual konvensional rentan terhadap kesalahan manusia dan tidak memungkinkan monitoring real-time \citep{smith2018experimental}. Sistem berbasis GUI yang dikembangkan sebelumnya masih terbatas pada analisis offline dan tidak terintegrasi dengan teknologi modern. Keterbatasan-keterbatasan ini menunjukkan perlunya pendekatan baru yang lebih efisien dan akurat.
+
+ Kemajuan teknologi Internet of Things (IoT) menawarkan peluang baru untuk mengaplikasikan konsep koefisien restitusi secara lebih inovatif dan praktis. \citep{zhang2021iot} menunjukkan bahwa sistem berbasis IoT dapat memberikan monitoring real-time dengan akurasi tinggi dalam eksperimen fisika. \citep{anderson2019digital} menekankan bahwa transformasi digital dalam pendidikan fisika dari metode tradisional ke sistem berbasis IoT dapat meningkatkan efektivitas pembelajaran. Penelitian terkini menitikberatkan pada pemanfaatan IoT, dengan mengintegrasikan sensor ultrasonik HCSR04 dan modul ESP8266, untuk mengukur koefisien restitusi pada berbagai jenis bola secara real-time.
+
+ Dengan mengintegrasikan teknologi IoT, eksperimen pengukuran koefisien restitusi kini dapat dilakukan dengan lebih efisien. Sensor HCSR04 digunakan untuk mendeteksi waktu tempuh gelombang ultrasonik, yang kemudian digunakan untuk menghitung jarak serta kecepatan bola sebelum dan sesudah tumbukan \citep{sadiku2015elements}. Sementara itu, modul ESP8266, yang merupakan mikrokontroler dengan kemampuan komunikasi nirkabel, memungkinkan pengumpulan dan pengolahan data secara real-time, serta pengiriman data ke perangkat lain untuk analisis lanjutan \citep{monk2016programming}.
+
+ Penelitian \citep{juita2020penentuan} menunjukkan bahwa bola pingpong memiliki koefisien restitusi tinggi, yakni sekitar 0{,}795, yang menandakan bahwa bola tersebut sangat elastis dan ideal untuk digunakan dalam demonstrasi hukum kekekalan energi. Sementara itu, \citep{izzuddin2015menentukan} melaporkan bahwa bola tenis meja memiliki koefisien restitusi rata-rata 0{,}89, bahkan lebih tinggi dari bola pingpong dalam beberapa pengujian, menegaskan pentingnya keakuratan alat ukur dalam membedakan sifat material. Di sisi lain, \citep{clarania2012koefisien} menyoroti bahwa bola plastik dan bola sepak karet menunjukkan nilai restitusi yang jauh lebih rendah, masing-masing sebesar 0{,}39 dan 0{,}45, yang berarti banyak energi hilang akibat deformasi dan redaman internal.
+
+ Penggunaan IoT dalam eksperimen ini memberikan beberapa keunggulan. Selain meningkatkan akurasi pengukuran, pendekatan ini memungkinkan pengolahan data secara otomatis, mengurangi potensi kesalahan manusia, dan mempercepat proses eksperimen. Lebih jauh, modul ESP8266 memberikan fleksibilitas tinggi dengan membuat eksperimen menjadi portabel dan mudah diakses, sehingga dapat diterapkan dalam berbagai lingkungan, baik akademik maupun industri.
+
+ Penelitian ini tidak hanya berkontribusi pada pemahaman mendalam terkait konsep koefisien restitusi, tetapi juga membuka peluang baru untuk integrasi teknologi dalam pengukuran fisika. Sistem berbasis IoT ini dirancang khusus untuk memenuhi kebutuhan mahasiswa fisika dan siswa SMA yang mempelajari konsep fisika. Bagi mahasiswa fisika, penelitian ini menyediakan platform eksperimen yang canggih dan real-time untuk memahami konsep tumbukan dan elastisitas material secara mendalam. Sementara untuk siswa SMA, sistem ini menawarkan pendekatan pembelajaran yang interaktif dan mudah dipahami, membantu mereka memvisualisasikan konsep fisika yang abstrak menjadi pengalaman praktis yang konkret. Dengan memadukan konsep fisika klasik dan teknologi modern, penelitian ini menghadirkan solusi inovatif yang relevan dengan kebutuhan era digital saat ini, khususnya dalam konteks pendidikan fisika di tingkat menengah dan tinggi.
+
+\section{Rumusan Masalah}
+ Berdasarkan latar belakang yang telah dijelaskan, maka permasalahan dalam penelitian ini dirumuskan sebagai berikut:
+\begin{enumerate}
+\item Bagaimana mengatasi keterbatasan metode pengukuran koefisien restitusi konvensional yang rentan terhadap kesalahan manusia dan tidak memungkinkan monitoring real-time?
+\item Bagaimana mengembangkan sistem pengukuran koefisien restitusi berbasis IoT yang dapat memberikan akurasi tinggi tanpa memerlukan analisis pascaproses yang kompleks seperti pada metode video tracking?
+\item Bagaimana merancang sistem berbasis sensor ultrasonik HCSR04 dan modul ESP8266 yang dapat mengukur koefisien restitusi secara real-time dan otomatis?
+\item Faktor-faktor apa saja yang memengaruhi keakuratan pengukuran koefisien restitusi menggunakan teknologi IoT, dan bagaimana cara mengoptimalkannya?
+\item Bagaimana mengintegrasikan teknologi modern dalam pembelajaran fisika untuk mengatasi keterbatasan metode tradisional dalam memahami konsep tumbukan dan elastisitas material?
+\item Bagaimana karakteristik material bola yang berbeda (bekel, tenis meja, tenis lapangan, sepak karet, dan plastik) memengaruhi nilai koefisien restitusi dan ketelitian pengukuran sistem IoT?
+\item Bagaimana tingkat konsistensi dan repeatabilitas pengukuran sistem berbasis IoT dalam menganalisis lima jenis material bola yang berbeda?
+\end{enumerate}
+
+\section{Batasan Masalah}
+ Untuk menjaga fokus penelitian, batasan-batasan yang diterapkan dalam penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+    \item Penelitian ini menggunakan metode pengukuran terhadap 5 bola .
+    \item Alat pengukuran tersebut dioperasikan menggunakan esp8266 dengan protokol  IoT (\textit{Internet of Things}) berbasis MQTT (\textit{Message Queuing Telemetry Transport}).
+    \item Batas minimum ketinggian pantulan yang dapat dideteksi oleh sistem adalah 15 cm untuk mempertahankan akurasi pengukuran dan mencegah distorsi data akibat keterbatasan resolusi sensor.
+    \item Setiap pembacaan ketinggian yang identik dianggap sebagai satu nilai pengukuran tunggal, mengingat karakteristik sensor HC-SR04 yang dapat menghasilkan pembacaan serupa untuk posisi objek yang berdekatan.
+    \item Data eksperimen yang diperoleh dari sensor ultrasonik telah diolah dan disajikan dalam bentuk tabel untuk memudahkan analisis karakteristik fisik setiap bola dan validasi hasil pengukuran koefisien restitusi, meliputi data ketinggian awal, dan nilai koefisien restitusi untuk setiap jenis bola yang diuji.
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+ Tujuan dari penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+\item Mengembangkan sistem pengukuran koefisien restitusi berbasis IoT yang dapat mengatasi keterbatasan metode konvensional dan memberikan monitoring real-time dengan akurasi tinggi.
+\item Merancang sistem pengukuran koefisien restitusi menggunakan teknologi IoT yang efisien tanpa memerlukan analisis pascaproses yang kompleks seperti pada metode video tracking.
+\item Mengimplementasikan sistem berbasis sensor ultrasonik HCSR04 dan modul ESP8266 untuk mengukur koefisien restitusi secara real-time dan otomatis.
+\item Mengidentifikasi dan mengoptimalkan faktor-faktor yang memengaruhi keakuratan pengukuran koefisien restitusi menggunakan teknologi IoT.
+\item Mengintegrasikan teknologi modern dalam pembelajaran fisika untuk meningkatkan pemahaman konsep tumbukan dan elastisitas material dibandingkan metode tradisional.
+\item Menganalisis secara komprehensif karakteristik koefisien restitusi lima jenis material bola berbeda (bekel, tenis meja, tenis lapangan, sepak karet, dan plastik) menggunakan sistem monitoring IoT.
+\item Mengevaluasi tingkat konsistensi, ketelitian, dan repeatabilitas pengukuran sistem berbasis IoT untuk berbagai material dengan karakteristik elastis yang beragam.
+\end{enumerate}
+
+\section{Manfaat Penelitian}
+ Penelitian ini diharapkan memberikan manfaat sebagai berikut:
+\begin{enumerate}
+\item Menyediakan solusi utama bagi individu yang ingin belajar fisika dengan integrasi teknologi modern.
+\item Mempermudah praktikan dalam memahami konsep fisika, khususnya dalam menentukan nilai koefisien restitusi.
+\item Memberikan acuan untuk pengembangan alat praktikum yang sederhana dan hemat biaya.
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+ Penulisan Skripsi ini disusun ke dalam lima bab dengan sistematika sebagai berikut:
+\begin{itemize}
+	\item \textbf{BAB I: PENDAHULUAN} \\
+	Bab ini mencakup latar belakang penelitian, rumusan masalah, tujuan penelitian, batasan masalah, serta sistematika penulisan yang memberikan gambaran menyeluruh tentang penelitian.
+	\item \textbf{BAB II: TINJAUAN PUSTAKA} \\
+	Bab ini membahas berbagai konsep dan referensi yang relevan sebagai dasar untuk menjelaskan alasan dilakukannya penelitian.
+	\item \textbf{BAB III: METODOLOGI PENELITIAN} \\
+	Bab ini menjelaskan lokasi penelitian, peralatan atau instrumen yang digunakan, serta proses pengumpulan dan analisis data.
+	\item \textbf{BAB IV: HASIL DAN PEMBAHASAN} \\
+	Bab ini menguraikan hasil pengujian terhadap lima bola, termasuk ketelitian data dan nilai koefisien restitusi untuk menentukan apakah pantulan bola tersebut sempurna atau tidak.
+	\item \textbf{BAB V: PENUTUP} \\
+	Bab ini berisi kesimpulan dari penelitian serta saran untuk pengembangan lebih lanjut.
+\end{itemize}

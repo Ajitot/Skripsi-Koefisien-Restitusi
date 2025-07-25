@@ -1,0 +1,284 @@
+%==============================================================================
+%                        Essential Document Setup
+%==============================================================================
+% Page Layout
+\usepackage[left=3.00cm, top=2cm, right=2.00cm, bottom=2.00cm]{geometry}
+\pdfimageresolution=72
+
+% Font and Language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bahasai]{babel}
+\usepackage{natbib}
+\bibliographystyle{config/apalikeid}
+% Modifikasi untuk bahasa Indonesia
+\addto\captionsbahasa{%
+  \renewcommand{\refname}{Daftar Pustaka}%
+  \renewcommand{\bibname}{Daftar Pustaka}%
+}
+
+\usepackage{times}
+\usepackage{mfirstuc}
+
+% Basic Spacing
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\usepackage{tabularx}
+
+\usepackage{xstring}
+\usepackage{etoolbox} % Paket untuk logika ekspresi boolean
+
+
+%==============================================================================
+%                        Page Style and Typography
+%==============================================================================
+% Headers and Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Chapter and Section Formatting
+\usepackage{titlesec, titletoc}
+\newcommand{\customdotfill}[1]{\leavevmode \leaders\hbox to #1 {\hss.\hss}\hfill\null}
+
+% Chapter Formatting for Table of Contents
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titlecontents{chapter}[0pt]
+{\addvspace{1pc}\bfseries}
+{BAB \thecontentslabel\quad}
+{}
+{\customdotfill{0.86em}\contentspage}
+[\addvspace{1pt}]
+
+% Chapter Title Formatting in Document
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}
+{BAB \thechapter}
+{12pt}
+{}
+\titlespacing*{\chapter}{0pt}{0pt}{*2}
+
+% Section, Figure, and Table Numbering (e.g., 1.1, 1.1.1)
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+% Section Formatting for Table of Contents
+\titlecontents{section}[2.5em]
+{\addvspace{2pt}}
+{\thecontentslabel\quad}
+{}
+{\customdotfill{0.86em}\contentspage}
+
+% Subsection Formatting for Table of Contents
+\titlecontents{subsection}[5em]
+{\addvspace{1pt}}
+{\thecontentslabel\quad}
+{}
+{\customdotfill{0.86em}\contentspage}
+
+% Subsubsection Formatting for Table of Contents
+\titlecontents{subsubsection}[7.5em]
+{\addvspace{1pt}}
+{\thecontentslabel\quad}
+{}
+{\customdotfill{0.86em}\contentspage}
+
+\titleformat{\section}
+{\normalfont \Large \bfseries}
+{\thesection}
+{1em}
+{}
+\titlespacing*{\section}{0pt}{0pt}{*2}
+
+
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Appendix Setup
+\usepackage{appendix}
+
+%==============================================================================
+%                       References and Citations
+%==============================================================================
+
+
+%==============================================================================
+%                       Mathematics and Algorithms
+%==============================================================================
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{algorithm}
+\allowdisplaybreaks[1]
+\usepackage{siunitx}
+
+%==============================================================================
+%                         Tables and Figures
+%==============================================================================
+\usepackage{float, rotating, wrapfig, graphicx}
+\usepackage{multirow}
+\usepackage{array, longtable, tabularray, booktabs}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% Captions
+\usepackage{caption}
+\usepackage[labelformat=simple,labelsep=period]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\DefTblrTemplate{contfoot-text}{default}{}
+\DefTblrTemplate{conthead-text}{default}{}
+
+% Graphics Path
+
+%==============================================================================
+%                      Code Listings Configuration
+%==============================================================================
+\usepackage{listings, verbatim, alltt}
+\usepackage{xcolor}
+\usepackage{amsmath,amsfonts, amssymb,amsthm}
+% Colors for Code
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{codegreen}{rgb}{0,0.4,0}
+\definecolor{codeblue}{rgb}{0.0,0.0,0.8}
+
+% Arduino Language Definition
+\lstdefinelanguage{Arduino}{
+	morekeywords={
+			include, define, void, pinMode, digitalWrite, digitalRead, analogWrite,
+			analogRead, delay, HIGH, LOW, INPUT, OUTPUT, INPUT_PULLUP, Serial,
+			begin, print, println, if, else, for, while, switch, case, default,
+			break, continue, return, true, false, boolean, byte, int, long, float,
+			char, String, sizeof, init, MQUnifiedsensor, setRegressionMethod, setA,
+			setB, setRL, setR0, update
+		},
+	sensitive=true,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]"
+}
+
+% Listing Style
+\lstset{
+	language=Arduino,
+	backgroundcolor=\color{backcolour},
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{red},
+	showstringspaces=false,
+	columns=fixed,
+	tabsize=4,
+	breaklines=true,
+	breakatwhitespace=false,
+	xrightmargin=-1cm,
+	framexleftmargin=1mm,
+	frame=shadowbox,
+	rulesepcolor=\color{codeblue},
+	captionpos=t,
+	belowcaptionskip=2pt,
+}
+
+\captionsetup[lstlisting]{labelformat=simple, labelsep=colon, format=plain, font=small}
+\renewcommand{\lstlistingname}{Program}
+
+%==============================================================================
+%                       Diagrams and Graphics
+%==============================================================================
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+% TikZ Libraries
+\usetikzlibrary{
+	arrows,
+	arrows.meta,
+	backgrounds,
+	calc,
+	calligraphy,
+	decorations.pathreplacing,
+	fit,
+	positioning,
+	shapes,
+	shapes.geometric,
+	shapes.multipart,
+	decorations.pathmorphing
+}
+
+% PGFPlots Configuration
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{
+	dateplot,
+	fillbetween,
+	groupplots,
+	statistics
+}
+
+% Flowchart Styles
+\tikzset{
+    startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30, font=\footnotesize},
+    process/.style={rectangle, minimum width=4cm, minimum height=1cm, text width = 4cm, text centered, draw=black, fill=orange!30, font=\footnotesize},
+    decision/.style={diamond, minimum width=4cm, text width=3.5cm, text centered, draw=black, fill=green!30, aspect=2, inner sep=0pt, yshift=-0.5cm font=\footnotesize},
+    arrow/.style={thick,->,>=stealth'}
+}
+
+
+%==============================================================================
+%                        Lists and Content
+%==============================================================================
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+\usepackage{lipsum}
+
+%==============================================================================
+%                             Utilities
+%==============================================================================
+\usepackage{eso-pic, makeidx, pst-node, datetime, lscape, siunitx}
+\usepackage[normalem]{ulem}
+
+% Warning Suppression
+\usepackage{silence}
+\WarningsOff*
+\ErrorsOff*
+
+%==============================================================================
+%                      Hyperlinks and PDF Settings
+%==============================================================================
+\usepackage{hyperref}
+\urlstyle{same}
+\hypersetup{
+	thecontentslabel=,
+	titlecontents=,
+	titletoc=,
+	linktoc=all,
+	pdfborder=0 0 0,
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=black,
+	urlcolor=black,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	pdfstartview=FitH,
+	pdfview=FitH,
+}
+
+% Background Watermark
+\usepackage{background}
+\backgroundsetup{
+	scale=0.3,
+	opacity=0.3,
+	angle=0,
+	contents={\includegraphics[width=\paperwidth, height=\paperheight]{images/Logo UIN.png}}
+}
+\usepackage{pdflscape} % Add this to your preamble
+
+%==============================================================================
+%                           Chemistry Packages
+% %==============================================================================
+% \usepackage{chemfig}
+% \usepackage{xymtex}
+
+\usepackage{pdfpages}

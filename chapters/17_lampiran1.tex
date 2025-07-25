@@ -1,0 +1,149 @@
+% Add these packages at the beginning of your main document or preamble:
+% \usepackage{tikz}
+% \usetikzlibrary{decorations.pathmorphing}
+% \usepackage{amsmath}
+% \usepackage{xcolor}
+\chapter{PENURUNAN PERSAMAAN KOEFISIEN RESTITUSI}
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[scale=1.2]
+        % Ground/Earth representation
+        \fill[brown!30] (-4,-0.2) rectangle (4,0);
+        \draw[thick] (-4,0) -- (4,0);
+        \node[below] at (0,-0.3) {\textbf{Bumi (A)}};
+
+        % Initial position - ball at height h
+        \draw[blue, thick] (-2,0) -- (-2,4);
+        \draw[dashed] (-2.2,4) -- (-1.8,4);
+        \node[left] at (-2.2,4) {$h$};
+
+        % Ball at initial height
+        \fill[red!70] (-2,4) circle (0.2);
+        \node[above] at (-2,4.3) {\textbf{Bola (B)}};
+
+        % Velocity arrow before collision
+        \draw[->, thick, red] (-2,3.5) -- (-2,2) node[midway, left] {$v_B$};
+
+        % Ball just before collision
+        \fill[red!70] (-2,0.3) circle (0.2);
+
+        % Collision point indicator with wavy line instead of zigzag
+        \draw[thick, decorate, decoration={snake, amplitude=0.5mm, segment length=2mm}] (-2.5,0.1) -- (-1.5,0.1);
+        \node[below] at (-2,-0.5) {\textcolor{red}{\textbf{Tumbukan}}};
+
+        % Ball after collision (bouncing up)
+        \fill[blue!70] (2,0.3) circle (0.2);
+
+        % Velocity arrow after collision
+        \draw[->, thick, blue] (2,0.8) -- (2,2.3) node[midway, right] {$v'_B$};
+
+        % Final position - ball at height h₁
+        \draw[blue, thick] (2,0) -- (2,2.5);
+        \draw[dashed] (1.8,2.5) -- (2.2,2.5);
+        \node[right] at (2.2,2.5) {$h_1$};
+
+        % Ball at final height
+        \fill[blue!70] (2,2.5) circle (0.2);
+
+        % Labels for phases
+        \node[above, align=center] at (-2,5) {\textbf{Sebelum Tumbukan}\\Ketinggian: $h$\\Kecepatan: $v_B = \sqrt{2gh}$};
+        \node[above, align=center] at (2,3.5) {\textbf{Setelah Tumbukan}\\Ketinggian: $h_1$\\Kecepatan: $v'_B = \sqrt{2gh_1}$};
+
+        % Arrow showing the process
+        \draw[->, very thick, green!60!black] (-0.5,2) arc (180:0:0.5) node[midway, above] {\textbf{Proses}};
+
+        % Reference line for heights
+        \draw[dotted] (-3,0) -- (-3,4.5);
+        \draw[dotted] (3,0) -- (3,3);
+    \end{tikzpicture}
+\end{figure}
+\textbf{Keterangan:}
+\begin{itemize}
+    \item A = bumi
+    \item B = bola
+    \item $h$ = ketinggian awal bola
+    \item $h_1$ = ketinggian akhir bola
+    \item $v_B$ = kecepatan sebelum tumbukan bola
+    \item $v'_B$ = kecepatan setelah tumbukan bola
+\end{itemize}
+\section*{Hukum Kekekalan Momentum}
+\begin{align}
+    p_A + p_B &= p'_A + p'_B \\
+    m_A v_A + m_B v_B &= m_A v'_A + m_B v'_B \\
+    m_A v_A - m_A v'_A &= m_B v'_B - m_B v_B \\
+    m_A (v_A - v'_A) &= m_B (v'_B - v_B) \quad \text{...(1)}
+\end{align}
+
+\section*{Hukum Kekekalan Energi Kinetik}
+\begin{align}
+    EK_A + EK_B &= EK'_A + EK'_B \\
+    \frac{1}{2} m_A v_A^2 + \frac{1}{2} m_B v_B^2 &= \frac{1}{2} m_A {v'_A}^2 + \frac{1}{2} m_B {v'_B}^2 \\
+    m_A v_A^2 - m_A {v'_A}^2 &= m_B {v'_B}^2 - m_B v_B^2 \\
+    m_A (v_A^2 - {v'_A}^2) &= m_B ({v'_B}^2 - v_B^2) \quad \text{...(2)}
+\end{align}
+
+Membagi persamaan (2) dengan persamaan (1):
+\begin{align}
+    \frac{m_A (v_A^2 - {v'_A}^2)}{m_A (v_A - v'_A)} &= \frac{m_B ({v'_B}^2 - v_B^2)}{m_B (v'_B - v_B)}
+\end{align}
+
+Karena \( m_A \) dan \( m_B \) ada di pembilang dan penyebut, kita dapat menyederhanakan:
+\begin{equation}
+    \frac{(v_A^2 - {v'_A}^2)}{(v_A - v'_A)} = \frac{({v'_B}^2 - v_B^2)}{(v'_B - v_B)}
+\end{equation}
+
+Gunakan identitas pemfaktoran untuk selisih kuadrat:
+\begin{gather}
+    v_A^2 - {v'_A}^2 = (v_A - v'_A)(v_A + v'_A) \\
+    {v'_B}^2 - v_B^2 = (v'_B - v_B)(v'_B + v_B)
+\end{gather}
+
+Masukkan ke dalam persamaan:
+\begin{equation}
+    \frac{(v_A - v'_A)(v_A + v'_A)}{(v_A - v'_A)} = \frac{(v'_B - v_B)(v'_B + v_B)}{(v'_B - v_B)}
+\end{equation}
+
+Karena \( (v_A - v'_A) \) dan \( (v'_B - v_B) \) ada di pembilang dan penyebut, kita bisa menyederhanakan:
+\begin{align}
+    v_A + v'_A &= v'_B + v_B \\
+    v_A - v_B &= v'_B - v'_A \\
+    -(v_B - v_A) &= v'_B - v'_A \\
+    1 &= \frac{v'_B - v'_A}{v_B - v_A}
+\end{align}
+Angka "1" di atas menunjukkan nilai koefisien restitusi untuk tumbukan lenting 
+sempurna, sehingga secara umum persamaan koefisien restitusi untuk tumbukan adalah sebagai berikut.
+\begin{equation}
+        e = \frac{v'_B - v'_A}{v_B - v_A}
+\end{equation}
+
+Pada saat bola jatuh bebas ke bawah berlaku hukum kekekalan energi sehingga kita 
+dapat menentukan kecepatan benda sesaat sebelum bertumbukan dengan lantai 
+seperti berikut. 
+\begin{align}
+    E_P &= E_K \\
+    mgh &= \frac{1}{2} mv^2 \\
+    gh &= \frac{1}{2} v^2 \\
+    v^2 &= 2gh \\
+    v &= \sqrt{2gh}
+\end{align}
+
+Dengan menggunakan cara yang sama seperti di atas, maka kita dapat menentukan 
+hubungan antara kecepatan di dasar dengan ketinggian seperti berikut:
+\begin{gather}
+    v_B = \sqrt{2gh} \\
+    v'_B = \sqrt{2gh_1}
+\end{gather}
+
+Untuk pemantulan pertama kita dapat menentukan koefisien restitusi yakni:
+\begin{equation}
+        e = \frac{v'_B - v'_A}{v_B - v_A}
+\end{equation}
+
+$ v'_A = v_A = 0 $ (Diam Terhadap Bola).
+($v$ bernilai negatif karena arahnya ke bawah)
+\begin{align}
+    e &= \frac{v_1}{v} \\
+    e &= \sqrt{\frac{2gh_1}{2gh}} \\
+    e &= \sqrt{\frac{h_1}{h}} 
+\end{align}
+

@@ -1,0 +1,110 @@
+# LaTeX compilation files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+*.eps
+*.gz
+*.bak
+*.backup
+*.brf
+*.run.xml
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.xdy
+*.idx
+*.ilg
+*.ind
+*.loa
+*.lol
+*.thm
+*.cb
+*.spl
+*.slg
+*.slo
+*.soc
+*.syc
+*.syg
+*.synctex(busy)
+*.synctex.gz(busy)
+*.synctex.gz(busy)*
+*.synctex.gz(busy)*
+*.bbl
+*.blg
+*.toc
+*.aux
+*.out
+
+# LaTeX auxiliary folders
+_auto/
+auto/
+*.dirtree
+
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.log
+*.swp
+*.swo
+*.bak
+*.old
+*.orig
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment folders
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Build folders (anywhere in the project)
+build/
+dist/
+**/build/
+**/dist/
+*.egg-info/
+.eggs/
+
+# VSCode settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Other system files
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.temp
+*.~*

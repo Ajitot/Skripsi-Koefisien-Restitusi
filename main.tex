@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{report}
+\input{config/preamble}
+\input{config/metadata}
+
+\begin{document}
+
+\pagenumbering{roman}
+\input{chapters/01_cover}
+\input{chapters/02_surat_pernyataan_keaslian}
+\input{chapters/03_lembar_persetujuan_munaqasyah}
+\input{chapters/04_lembar_pengesahan}
+% \input{chapters/05_lembar_persembahan}
+
+\input{chapters/06_abstrak_id}
+\input{chapters/07_abstract_en}
+\input{chapters/08_kata_pengantar}
+\input{chapters/09_daftar_isi}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{chapters/10_bab1_pendahuluan}
+\input{chapters/11_bab2_dasar_teori}
+\input{chapters/12_bab3_metode_penelitian}
+\input{chapters/13_bab4_hasil_dan_pembahasan}
+\input{chapters/14_bab5_penutup}
+
+\input{chapters/15_daftar_pustaka}
+
+% Lampiran
+\appendix
+
+\renewcommand{\chaptername}{LAMPIRAN}
+\titleformat{\chapter}[display]
+{\normalfont\huge \bfseries \centering}
+{\chaptername~\thechapter}
+{12pt}
+{}
+
+% format chapter at table of contents
+\titlecontents{chapter}[0pt]
+{\addvspace{1pc}\bfseries}
+{LAMPIRAN \thecontentslabel\quad}
+{}
+{\customdotfill{0.86em}\contentspage}
+[\addvspace{1pt}]
+
+% Section, Figure, and Table Numbering (e.g., 1.1, 1.1.1)
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\thefigure}{L.\arabic{figure}}
+\renewcommand{\thetable}{L.\arabic{table}}
+
+\input{chapters/16_lampiran}
+
+
+\end{document}
