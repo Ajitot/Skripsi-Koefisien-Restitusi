@@ -2,52 +2,14 @@
 
 \section{Kesimpulan}
 
-\paragraph{}Berdasarkan hasil penelitian dan pembahasan yang telah dilakukan, dapat ditarik beberapa kesimpulan sesuai dengan tujuan penelitian:
+Berdasarkan hasil penelitian dan pembahasan, sistem pengukuran koefisien restitusi berbasis \textit{IoT} yang dikembangkan mampu mengatasi keterbatasan metode konvensional. Sistem ini memberikan pemantauan waktu nyata dengan tingkat ketelitian rata-rata 95,84\%, mengurangi kesalahan manusia, serta memudahkan pemahaman hasil penelitian melalui visualisasi data. Pengukuran koefisien restitusi dapat dilakukan secara langsung tanpa analisis \textit{post-processing} rumit, berkat algoritma pada \textit{ESP8266} yang memungkinkan perhitungan otomatis dengan latensi rata-rata 23 ms. Sistem berbasis sensor ultrasonik \textit{HC-SR04} dan \textit{ESP8266} berhasil diimplementasikan untuk pengukuran waktu nyata dan otomatis, didukung protokol \textit{MQTT} yang memberikan stabilitas transmisi data dengan tingkat keberhasilan 98,7\%. Optimasi pada resolusi sensor (±0,5 cm), frekuensi \textit{sampling} (20 Hz), stabilitas komunikasi, dan kalibrasi sistem (faktor koreksi 1,02) meningkatkan performa sistem.
 
-\paragraph{}Dalam aspek \textbf{pengembangan sistem IoT untuk monitoring real-time}, sistem pengukuran koefisien restitusi berbasis IoT yang dikembangkan berhasil mengatasi keterbatasan metode konvensional dengan memberikan monitoring real-time dan akurasi tinggi. Integrasi sensor HC-SR04 dengan modul ESP8266 menghasilkan sistem dengan tingkat ketelitian rata-rata 95,84\% dan eliminasi kesalahan manusia dalam pengukuran manual.
-\paragraph{}Harap lengkapi tabel dengan visualisasi grafis yang sesuai agar penyajian data menjadi lebih informatif dan mudah dipahami oleh pembaca.
-\paragraph{}Dari segi \textbf{efisiensi sistem tanpa analisis pascaproses}, sistem yang dirancang mampu mengukur koefisien restitusi secara langsung tanpa memerlukan analisis pascaproses yang kompleks seperti pada metode video tracking. Implementasi algoritma real-time dalam ESP8266 memungkinkan perhitungan koefisien restitusi secara otomatis dengan latensi rata-rata 23 ms.
+Sistem ini juga berhasil diterapkan dalam pembelajaran fisika, khususnya untuk memahami konsep tumbukan dan elastisitas material, dengan keunggulan pemantauan waktu nyata, akurasi tinggi, akses data mudah, dan visualisasi interaktif. Penelitian ini menganalisis karakteristik koefisien restitusi lima jenis bola: bola bekel (0,89 ± 0,03, ketelitian 95,84\%), tenis meja (0,89 ± 0,04, 95,86\%), tenis lapangan (0,77 ± 0,05, 92,89\%), sepak karet (0,78 ± 0,06, 91,72\%), dan plastik (0,68 ± 0,10, 82,45\%). Bola bekel dan tenis meja memiliki elastisitas tertinggi, diikuti bola sepak karet, tenis lapangan, dan plastik; material elastis menghasilkan pengukuran lebih konsisten dan akurat.
 
-\paragraph{}Dalam \textbf{implementasi sistem real-time dan otomatis}, sistem berbasis sensor ultrasonik HC-SR04 dan modul ESP8266 berhasil diimplementasikan untuk mengukur koefisien restitusi secara real-time dan otomatis. Protokol MQTT memberikan stabilitas transmisi data dengan tingkat keberhasilan 98,7\%, mendukung monitoring berkelanjutan tanpa intervensi manual.
-
-\paragraph{}Mengenai \textbf{optimasi faktor keakuratan}, identifikasi dan optimasi faktor-faktor yang memengaruhi keakuratan pengukuran menghasilkan peningkatan performa sistem. Faktor kritis meliputi resolusi sensor (±0,5 cm), frekuensi sampling optimal (20 Hz), stabilitas komunikasi MQTT, dan kalibrasi sistem dengan faktor koreksi 1,02 untuk kompensasi kesalahan sistematis.
-
-\paragraph{}Dalam konteks \textbf{integrasi teknologi dalam pembelajaran fisika}, sistem berhasil mengintegrasikan teknologi modern dalam pembelajaran fisika dengan meningkatkan pemahaman konsep tumbukan dan elastisitas material. Implementasi sistem IoT memberikan keunggulan berupa monitoring real-time, akurasi tinggi, aksesibilitas data, dan visualisasi yang mendukung pembelajaran interaktif dibandingkan metode tradisional.
-
-\paragraph{}Terkait \textbf{analisis komprehensif lima material bola}, penelitian berhasil menganalisis karakteristik koefisien restitusi lima jenis material berbeda dengan hasil: bola bekel (0,89 ± 0,03, ketelitian 95,84\%), bola tenis meja (0,89 ± 0,04, ketelitian 95,86\%), bola tenis lapangan (0,77 ± 0,05, ketelitian 92,89\%), bola sepak karet (0,78 ± 0,06, ketelitian 91,72\%), dan bola plastik (0,68 ± 0,10, ketelitian 82,45\%).
-
-\paragraph{}Dalam hal \textbf{karakteristik material dan elastisitas}, hasil penelitian menunjukkan hierarki elastisitas material berdasarkan koefisien restitusi, dengan bola bekel dan tenis meja memiliki elastisitas tertinggi, diikuti oleh bola sepak karet, bola tenis lapangan, dan bola plastik. Material dengan elastisitas tinggi menghasilkan pengukuran yang lebih konsisten dan akurat.
-
-\paragraph{}Mengenai \textbf{konsistensi dan repeatabilitas sistem}, evaluasi terhadap 100 percobaan (20 percobaan per material) menunjukkan bahwa sistem memiliki tingkat konsistensi tinggi dengan variabilitas pengukuran terendah pada bola bekel (±0,03) dan tertinggi pada bola plastik (±0,10). Sistem menunjukkan repeatabilitas yang baik dengan koefisien variasi berkisar 3,4\% hingga 14,7\%.
-
-\paragraph{}Dalam aspek \textbf{validasi sistem}, validasi dengan metode referensi menghasilkan korelasi R² = 0,94, membuktikan akurasi sistem yang sangat baik. Reproducibility pengukuran menunjukkan variabilitas ±2,3\%, memenuhi standar untuk aplikasi pendidikan.
+Evaluasi 100 percobaan (20 per jenis bola) menunjukkan konsistensi baik, dengan variabilitas terendah pada bola bekel (±0,03) dan tertinggi pada bola plastik (±0,10), serta \textit{repeatability} baik (koefisien variasi 3,4\%–14,7\%). Validasi sistem menggunakan metode referensi menghasilkan korelasi R² = 0,94, membuktikan akurasi sangat baik, dan \textit{reproducibility} pengukuran (variabilitas ±2,3\%) memenuhi standar aplikasi pendidikan.
 
 \section{Saran}
 
-\paragraph{}Berdasarkan hasil penelitian dan keterbatasan yang ditemukan, beberapa saran untuk pengembangan lebih lanjut adalah:
+Beberapa saran untuk pengembangan lebih lanjut antara lain: peningkatan resolusi sensor atau penggunaan beberapa sensor untuk akurasi lebih tinggi, memperluas jenis material bola yang diuji agar data lebih beragam, serta pengembangan algoritma (misal \textit{machine learning}) untuk prediksi koefisien restitusi berdasarkan karakteristik material dan lingkungan. Pengembangan antarmuka \textit{web} atau aplikasi \textit{mobile} terintegrasi dengan \textit{LMS} dapat mendukung pembelajaran jarak jauh dan \textit{hybrid}, serta penyusunan \textit{SOP} untuk implementasi sistem di berbagai institusi pendidikan agar hasil konsisten dan dapat direproduksi.
 
-\paragraph{}Dalam aspek \textbf{peningkatan resolusi sensor}, diperlukan implementasi sensor dengan resolusi lebih tinggi atau penggunaan multiple sensor arrays untuk meningkatkan akurasi pengukuran, terutama untuk bola dengan koefisien restitusi rendah yang menghasilkan pantulan minimal.
-
-\paragraph{}Terkait \textbf{ekspansi jenis material}, perlu dilakukan perluasan penelitian untuk menganalisis berbagai jenis material bola dengan karakteristik fisik yang beragam, termasuk bola logam, karet, dan komposit untuk memberikan database koefisien restitusi yang komprehensif.
-
-\paragraph{}Dalam hal \textbf{optimasi algoritma}, diperlukan pengembangan algoritma machine learning untuk prediksi koefisien restitusi berdasarkan karakteristik material dan kondisi lingkungan, meningkatkan akurasi sistem secara adaptif.
-
-\paragraph{}Mengenai \textbf{integrasi platform pendidikan}, perlu dikembangkan antarmuka web dan mobile application yang terintegrasi dengan Learning Management System (LMS) untuk mendukung pembelajaran jarak jauh dan hybrid learning.
-
-\paragraph{}Dalam aspek \textbf{standardisasi prosedur}, diperlukan penyusunan standar operasional prosedur (SOP) untuk implementasi sistem dalam berbagai institusi pendidikan, memastikan konsistensi dan reproduktibilitas hasil pengukuran.
-
-\paragraph{}Terkait \textbf{analisis faktor lingkungan}, perlu dilakukan penelitian lebih mendalam mengenai pengaruh faktor lingkungan seperti suhu, kelembaban, dan tekanan udara terhadap akurasi pengukuran sensor ultrasonik.
-
-\paragraph{}Dalam hal \textbf{pengembangan sistem multi-parameter}, diperlukan integrasi pengukuran parameter fisik tambahan seperti massa, diameter, dan kekerasan bola untuk analisis korelasi yang lebih komprehensif terhadap koefisien restitusi.
-
-\paragraph{}Mengenai \textbf{implementasi cloud computing}, perlu dikembangkan sistem berbasis cloud untuk penyimpanan dan analisis big data dari multiple instalasi sistem, memungkinkan analisis komparatif antar institusi dan region.
-
-\paragraph{}Dalam aspek \textbf{validasi skala besar}, diperlukan pelaksanaan validasi sistem pada skala yang lebih besar dengan melibatkan multiple institusi pendidikan untuk memverifikasi konsistensi dan reliabilitas sistem dalam berbagai kondisi operasional.
-
-\paragraph{}Terkait \textbf{pengembangan modul pembelajaran}, perlu dilakukan penyusunan modul pembelajaran terstruktur yang mengintegrasikan penggunaan sistem IoT dengan kurikulum fisika untuk mengoptimalkan proses transfer knowledge kepada mahasiswa dan siswa.
-
-\paragraph{}Dalam hal \textbf{analisis korelasi material-performa}, diperlukan penelitian lanjutan untuk menganalisis korelasi antara sifat fisik material (densitas, modulus elastisitas, struktur internal) dengan nilai koefisien restitusi dan ketelitian pengukuran sistem.
-
-\paragraph{}Mengenai \textbf{optimasi faktor eksternal}, perlu dikembangkan sistem kompensasi otomatis untuk faktor-faktor eksternal seperti suhu ruangan, arah pantulan, dan kondisi permukaan lantai yang memengaruhi akurasi pengukuran.
-
-\paragraph{}Penelitian ini memberikan kontribusi signifikan dalam modernisasi pendidikan fisika melalui integrasi teknologi IoT, membuka peluang untuk pengembangan sistem pembelajaran yang lebih interaktif, akurat, dan efisien. Implementasi sistem ini diharapkan dapat menjadi model untuk pengembangan teknologi pendidikan fisika di masa depan, mendukung transformasi digital dalam pendidikan sains dan teknologi.
+Penelitian lebih lanjut diperlukan untuk mengetahui pengaruh faktor lingkungan (suhu, kelembapan, tekanan udara) terhadap akurasi sensor ultrasonik, serta integrasi pengukuran parameter fisik lain (massa, diameter, kekerasan bola) untuk analisis lebih komprehensif. Pengembangan sistem berbasis \textit{cloud} dapat dilakukan untuk penyimpanan dan analisis data skala besar, memungkinkan perbandingan hasil antar institusi. Validasi sistem pada skala lebih besar dengan melibatkan banyak institusi pendidikan diperlukan untuk memastikan konsistensi dan reliabilitas. Penyusunan modul pembelajaran terstruktur dan terintegrasi dengan sistem \textit{IoT} ini dapat membantu proses pembelajaran fisika di sekolah maupun perguruan tinggi. Penelitian lanjutan juga dapat menganalisis hubungan sifat fisik material (densitas, \textit{modulus elastisitas}, struktur internal) dengan nilai koefisien restitusi dan ketelitian pengukuran, serta mengembangkan sistem kompensasi otomatis terhadap faktor eksternal (suhu ruangan, arah pantulan, kondisi permukaan lantai) untuk meningkatkan akurasi. Penelitian ini diharapkan berkontribusi pada modernisasi pendidikan fisika melalui integrasi teknologi \textit{IoT} dan menjadi model pengembangan sistem pembelajaran yang lebih interaktif, akurat, dan efisien di masa mendatang.
